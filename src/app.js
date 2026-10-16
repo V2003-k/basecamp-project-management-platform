@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import healthCheckRouter from "./routes/heathcheck.routes.js";
 
 const app = express();
 
@@ -20,5 +21,7 @@ app.use(
 app.get("/", (req, res) => {
   res.send("Welcome to Basecamp!");
 });
+
+app.use("/api/v1/healthcheck", healthCheckRouter);
 
 export default app;
