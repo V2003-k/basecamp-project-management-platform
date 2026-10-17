@@ -32,7 +32,7 @@ const userSchema = new Schema(
     },
     fullName: {
       type: String,
-      trim: String,
+      trim: true,
     },
     password: {
       type: String,
